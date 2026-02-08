@@ -9,7 +9,18 @@
       "WebFetch(domain:docs.cdp.coinbase.com)",
       "WebFetch(domain:build.avax.network)",
       "WebFetch(domain:www.x402.org)",
-      "WebFetch(domain:docs.payai.network)"
+      "WebFetch(domain:docs.payai.network)",
+      "Bash(npm install:*)",
+      "Bash(source:*)",
+      "Bash(npx tsc:*)",
+      "Bash(export:*)",
+      "Bash([ -s \"$NVM_DIR/nvm.sh\" ])",
+      "Bash(. \"$NVM_DIR/nvm.sh\")",
+      "Bash(npx hardhat compile:*)",
+      "Bash(npx next build:*)",
+      "Bash(npx hardhat run:*)",
+      "Bash(ls:*)",
+      "Bash(curl:*)"
     ]
   }
 }
