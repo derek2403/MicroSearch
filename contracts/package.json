@@ -9,10 +9,13 @@
     "deploy:baseSepolia": "hardhat run scripts/deploy.ts --network baseSepolia"
   },
   "devDependencies": {
-    "hardhat": "^2.22.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "^5.1.0",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0"
+    "hardhat": "^2.22.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4"
   }
 }

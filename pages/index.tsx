@@ -69,7 +69,7 @@ export default function Home() {
         );
         const paidData = await paidRes.json();
 
-        if (paidRes.ok && paidData.results) {
+        if (paidData.results) {
           setResults(paidData.results);
           setMeta({
             search_mode: paidData.search_mode,
@@ -79,6 +79,12 @@ export default function Home() {
             payer: paidData.payment?.payer,
           });
           setStep("results");
+        } else if (paidRes.status === 402) {
+          setError(
+            "Payment verification failed — your buyer wallet likely needs USDC on Base Sepolia. " +
+            "Get testnet USDC from https://faucet.circle.com/"
+          );
+          setStep("error");
         } else {
           setError(paidData.error || paidData.message || "Payment failed");
           setStep("error");

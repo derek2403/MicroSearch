@@ -20,7 +20,13 @@
       "Bash(npx next build:*)",
       "Bash(npx hardhat run:*)",
       "Bash(ls:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(node -e:*)",
+      "WebFetch(domain:8004agents.ai)",
+      "WebFetch(domain:eips.ethereum.org)",
+      "WebFetch(domain:sepolia.basescan.org)",
+      "Bash(cast code:*)"
     ]
   }
 }

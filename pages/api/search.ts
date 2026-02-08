@@ -81,8 +81,11 @@ export default async function handler(
     provider: "micropaid-search-api",
     search_mode,
     agent_identity: getAgentIdentity(),
-    ...(settlement.transaction
-      ? { payment: { transaction: settlement.transaction, payer: settlement.payer } }
-      : {}),
+    payment: {
+      settled: settlement.success,
+      transaction: settlement.transaction || null,
+      payer: settlement.payer || null,
+      ...(settlement.errorReason ? { error: settlement.errorReason } : {}),
+    },
   });
 }
